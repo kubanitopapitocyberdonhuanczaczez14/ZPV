@@ -1,0 +1,12 @@
+Git to program do ogarniania zmian w projekcie i zapisywania kolejnych wersji kodu. Mozna dzieki niemu pracować na różnych branchach i pózniej je ze soba połączyć. Commit zapisuje zmiany, a push i pull słuza do wysylania i pobierania ich z serwera.
+Podstawowe komendy:
+1.git status- sprawdza zmiany
+2.git add- dodaje zmiany
+3.git commit -m opis- zapisuje zmiany
+4.git branch nazwa- tworzy branch
+5.git switch nazwa- zmienia branch
+6.git merge nazwa- łączy branche
+7.git push- wysyla zmiany
+8.git pull- pobiera zmiany
+9.git clone- pobiera repozytorium
+
