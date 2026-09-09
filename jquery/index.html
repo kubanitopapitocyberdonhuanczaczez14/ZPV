@@ -20,6 +20,11 @@
         $(function(){
             $("#container").css("background-color", "grey")
             $("div").css("letter-spacing", "5px")
+            $('[href="#"]').attr("href", "https://tinder.com/")
+            $('#Minecraft').attr("style", "font-weight: bold");
+            $('li').eq(3).css("font-style", "italic")
+            $('li').not("#pierwszy").css("background-color", "lightgrey")
+            $('li').odd().css("color", "white");
 
         });
         
@@ -66,8 +71,8 @@
         <li><a href="*">Elden Ring</a></li>
         <li><a href="*">Baldur's Gate 3</a></li>
         <li><a href="*">Starfield</a></li>
-        <li><a href="*">Hollow Knight</a></li>
-        <li><a href="*">Minecraft</a></li>
+        <li><a href="#">Hollow Knight</a></li>
+        <li id="Minecraft"><a href="*">Minecraft</a></li>
         <li><a href="*">Portal 2</a></li>
         <li><a href="*">The Legend of Zelda: Breath of the Wild</a></li>
         <li><a href="*">Dark Souls III</a></li>
