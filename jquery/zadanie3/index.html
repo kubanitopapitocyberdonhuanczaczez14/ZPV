@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wprowadzenie Jquery</title>
+    <script
+  src="https://code.jquery.com/jquery-4.0.0.min.js"
+  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+  crossorigin="anonymous"></script>
+
+    <script>
+        
+
+        $(function(){
+            $("#test").on("click", function(){
+                console.log("Nasz Event")
+            });
+            $("#test").click(function(){
+                console.log("Nasz Event2")
+            })
+
+        $("#przywitaj").on("click", function(){
+                $("#komunikat").prepend().text("Hello")
+            });
+            $("#resetuj").click(function(){
+                $("#kwadrat").css("background-color", "red")
+                $("komunikat").text() = "";
+            })
+
+            let licznik = 0;
+            $("#kwadrat").click(fuction(){
+                licznik++;
+                $("p").text()("Kliknieto " + licznik + "razy")
+            })
+        })
+    </script>
+      <style>
+    #kwadrat { width: 150px; height: 150px; background: lightgray; }
+        </style>
+<button id="test">Test</button>
+<button id="przywitaj">przywitaj</button>
+</head>
+<body>
+</body>
+</html>
