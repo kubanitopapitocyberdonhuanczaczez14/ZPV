@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanie 7</title>
+    <script
+  src="https://code.jquery.com/jquery-4.0.0.min.js"
+  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+  crossorigin="anonymous"></script>
+    <script>
+                $(function(){
+                    $(document).on("keydown keyup keypress", function(){
+                        $('#eventType').text(event.type);
+                    })
+
+                    $(document).on("mousemove", function(){
+                        $('#pageX').text(event.pageX);
+                        $('#pageY').text(event.pageY);
+                    })
+
+                    $("#japko").css({
+                        "margin-left":Math.floor((Math.random() * 100) + 1),
+                        "margin-top":Math.floor((Math.random() * 100) + 1)
+                    })
+                   
+
+                    let positionX = 0;
+                    let positionY = 0;
+                    $(document).on("keydown", function(){
+                        if(event.key == "d"){
+                            positionX = positionX + 10;
+                            $("#kwadrat").css("margin-left",positionX + "px")
+                        }
+                        if(event.key == "a"){
+                            positionX = positionX - 10;
+                             $("#kwadrat").css("margin-left",positionX + "px")
+                        }
+                        if(event.key == "s"){
+                            positionY = positionY + 10;
+                             $("#kwadrat").css("margin-top",positionY + "px")
+                        }
+                        if(event.key == "w"){
+                            positionY = positionY - 10;
+                             $("#kwadrat").css("margin-top",positionY + "px")
+                        }
+                    })
+
+
+        });
+    </script>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+            #kwadrat{
+                background-color: turquoise;
+                height: 200px;
+                width: 200px;
+                margin: 1px;
+            }
+            #japko{
+                background-color: rgb(0, 255, 136);
+                height: 200px;
+                width: 200px;
+                margin: 1px;
+            }
+    </style>
+    
+</head>
+<body>
+    <input type="text" id="pole">
+
+    <p>
+        Typ zdarzenia:
+        <span id="eventType">---</span>
+    </p>
+
+    <p>
+        Pozycja myszy:
+        X = <span id="pageX">---</span>
+        Y = <span id="pageY">---</span>
+    </p>
+    <div id="kwadrat"></div>
+    <div id="japko"></div>
+</body>
+</html>
