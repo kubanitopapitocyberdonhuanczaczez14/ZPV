@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanie 8</title>
+    <script
+  src="https://code.jquery.com/jquery-4.0.0.min.js"
+  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+  crossorigin="anonymous"></script>
+    <script>
+                $(function(){
+                    $("#zmien").click(function(){
+                    $("#tekst").text("Nowy tekst");
+                    })
+                    $("#przelacz").click(function(){
+                        $("#pudelko").toggle();
+                    })
+                    $(".akapit").click(function(){
+                        $(this).toggleClass("podswietlony")
+                    })
+                    $("#akceptuje").on("change", function(){
+                        if(this.checked){
+                            $("#wyslij").removeAttr("disabled")
+                        }else{
+                            $("#wyslij").Attr("disabled", "disabled")
+                        }
+                    })
+                    $("li").each(function(index, element){
+                        $(element).text((index + 1) + "." + $(element).text())
+                    })
+                    $("#zaloguj").click(function(){
+                        let login = $("login").val();
+                        let haslo = $("haslo").val();
+                        let komunikat = $("komunikat");
+
+                        if(login.length < 3){
+                            komunikat.text("Co najmniej 3 znaki").css("color", "red");
+                        }else if(login.length < 6){
+                            komunikat.text("Co najmniej 6 znakow").css("color", "red");
+                        }else{
+                            komunikat.text("Zalogowano").css("color", "green");
+                        }
+                        
+
+                    });
+                });
+    </script>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .podswietlony{
+            background-color: yellow;
+        }
+        .lol{
+            length: 50px;
+        }
+    </style>
+    
+</head>
+<body>
+<p id="tekst">Stary tekst</p>
+<button id="zmien">Zmien</button>
+<div id="pudelko">Widzisz mnie</div><br>
+<button id="przelacz">Pokaz/ukryj</button>
+<p class="akapit">Kliknij Mnie</p>
+<input type="text" id="imie">
+<button class="lol" id="przywitaj"></button>
+<p id="wynik"></p>
+<label><input type="checkbox" id="akceptuje">Akceptuje</label>
+<button id="wyslij" disabled>Wyslij</button>
+
+<ul id="menu">
+    <li>Strona główna</li>
+    <li>o nas</li>
+    <li>kontakt</li>
+</ul>
+
+<input type="text" id="login">
+<input type="password" id="haslo">
+<button id="zaloguj">zaloguj</button>
+<p id="komunikat"></p>
+</body>
+</html>
