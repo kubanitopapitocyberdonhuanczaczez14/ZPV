@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanie 8</title>
+    <script
+  src="https://code.jquery.com/jquery-4.0.0.min.js"
+  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+  crossorigin="anonymous"></script>
+    <script>
+                $(function(){
+                    $("#baton").click(function(){
+                        $("#bla").hide();
+                    })
+                    $("#buton").click(function(){
+                        $("#bla").show();
+                    })
+                    $("#węgorz").click(function(){
+                        $("#bla").toggle();
+                    })
+                    $("#gora").click(function(){
+                        $("#a").slideUp();
+                    })
+                    $("#dol").click(function(){
+                        $("#a").slideDown();
+                    })
+                    $("#toggle").click(function(){
+                        $("#a").slideToggle();
+                    })
+
+                })
+    </script>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+    </style>
+    
+</head>
+<body>
+<p id="bla">Paragraf</p>
+<button id="baton">Ukryj</button>
+<button id="węgorz">Pokaz/Ukryj</button>
+<button id="buton">Pokaz</button><br><br>
+
+
+<button id="gora">Górna</button>
+<p id="a">Ketchup z HotDogiem</p><br><br>
+<button id="dol">Dolna</button>
+<button id="toggle">toggle</button>
+
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanie 8</title>
+    <script
+  src="https://code.jquery.com/jquery-4.0.0.min.js"
+  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+  crossorigin="anonymous"></script>
+    <script>
+                $(function(){
+                    if(e.key="Escape"){
+                        $("#pozostalo").text("Pozostało znaków: 10")
+                        $("#pozostalo").removeClass("blad")
+                        $(this).val("")
+                    }
+                })
+    </script>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .blad{
+            background-color: red;
+        }
+        
+    </style>
+    
+</head>
+<body>
+
+    <input type="text" id="tekst">
+    <p id="pozostalo">Pozostało znaków</p>
+</body>
+</html>
