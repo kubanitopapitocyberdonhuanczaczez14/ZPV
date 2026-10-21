@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wprowadzenie</title>
+    <script
+        src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+        crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#sprawdz").click(function(){
+                if($("#tekst").val().trim() === ""){
+                    $("#wiadomosc").text("pole puste");
+                }else{
+                     $("#wiadomosc").text($("#tekst").val())
+                }
+            })
+            $("#wyslij").click(function(){
+                if($("#nazwisko").val().trim() === ""){
+                    $("#komunikat").text("Podaj Nazwisko").css("background-color", "red");
+                }else{
+                     $("#komunikat").text($("#nazwisko").val()).css("background-color", "green");
+                }
+            })
+            $("#sprawdz2").click(function(){
+                let wiek = $("#wiek").val();
+                if(isNan(wiek)){
+                    $("#blad").text("wiek musi byc liczba")
+                }else{
+                    $("#blad").text("Masz" + wiek + "lat");
+                }
+            })
+            
+            $("#zapisz").click(function(){
+                let ocena = $("ocena").val();
+                if(isNaN(ocena)){
+                    $("#wynik").text("ocena musi byc liczba")
+                }else if(ocena < 1 || ocena > 6){
+                    $("#wynik").text("Ocena musi byc z zakresu 1-6")
+                    }else{
+                    $("#wynik").text("Zapisano ocene: " + ocena)
+                }
+            })
+        })
+    </script>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <input type="text" id="tekst">
+    <input type="button" id="sprawdz" value="check">
+    <p id="wiadomosc"></p>
+
+    <input type="text" id="nazwisko">
+    <input type="button" id="wyslij" value="Check"></button>
+    <p id="komunikat">a</p>
+
+    <input type="text" id="wiek">
+    <button id="sprawdz2">Sprawdź</button>
+    <p id="blad"></p>
+
+    <input type="text" id="ocena">
+    <button id="zapisz">Zapisz</button>
+    <p id="wynik"></p>
+
+</body>
+</html>
