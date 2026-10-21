@@ -34,7 +34,7 @@
             })
             
             $("#zapisz").click(function(){
-                let ocena = $("ocena").val();
+                let ocena = $("#ocena").val();
                 if(isNaN(ocena)){
                     $("#wynik").text("ocena musi byc liczba")
                 }else if(ocena < 1 || ocena > 6){
