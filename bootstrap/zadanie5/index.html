@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Schronisko Łapa - adoptuj przyjaciela.</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- Blok 1 – nagłówek -->
+    <header class="p-1 bg-dark text-white">
+        <div class="container">
+            <h1>Schronisko „Łapa”</h1>
+            <p>Każde zwierzę zasługuje na dom.</p>
+            <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Strona główna</a></li>
+            <li class="breadcrumb-item"><a href="#">Adopcja </a></li>
+            <li class="breadcrumb-item active" aria-current="page">Zwierzęta do adopcji</li>
+                </ol>
+            </nav>
+        </div>
+        </header>
+        <!-- Blok 2 – komunikat -->
+
+        <div class="container">
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <strong>Uwaga!</strong> W dniach 24-26 grudnia schronisko jest nieczynne. Zapraszamy od 27 grudnia.
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+        <!-- Blok 3 – karuzela -->
+        <div id="karuzela" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+        <button data-bs-target="#karuzela" data-bs-slide-to="0" class="active"></button>
+        <button data-bs-target="#karuzela" data-bs-slide-to="1"></button>
+        <button data-bs-target="#karuzela" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="slajd1.jpg" class="d-block w-100" alt="Slajd 1">
+            <div class="carousel-caption">
+                <h5>Adoptuj, nie kupuj</h5>
+                <p>W schronisku czeka na Ciebie ponad 80 zwierząt.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="slajd2.jpg" class="d-block w-100" alt="Slajd 2">
+            <div class="carousel-caption">
+                <h5>Dzień otwarty</h5>
+                <p>Odwiedź nas w każdą pierwszą sobotę miesiąca.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="slajd3.jpg" class="d-block w-100" alt="Slajd 3">
+            <div class="carousel-caption">
+                <h5>Potrzebujemy wolontariuszy</h5>
+                <p>Spacery z psami, socjalizacja kotów, pomoc przy wydarzeniach.</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" data-bs-target="#karuzela" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" data-bs-target="#karuzela" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+</body>
+</html>
